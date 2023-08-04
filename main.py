@@ -1,13 +1,8 @@
-# This is a sample Python script.
 
-# Press Skift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-import wmi
+
 import screen_brightness_control as sbc
 import tkinter as tk
 from tkinter import Scale, Button
-
-current = sbc.get_brightness()
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -21,13 +16,13 @@ def update_value(value):
 
 def set_lowest_brightness():
     sbc.set_brightness(0)
-    value_scale.set(0)  # Update slider position
+    value_scale.set(0)
     value_label.config(text="Nytt värde: 0")
 
 
 def set_highest_brightness():
     sbc.set_brightness(100)
-    value_scale.set(100)  # Update slider position
+    value_scale.set(100)
     value_label.config(text="Nytt värde: 100")
 
 
@@ -58,4 +53,3 @@ if __name__ == '__main__':
     root.mainloop()
 
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
