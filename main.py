@@ -5,7 +5,7 @@
 import wmi
 import screen_brightness_control as sbc
 import tkinter as tk
-from tkinter import Scale
+from tkinter import Scale, Button
 
 current = sbc.get_brightness()
 
@@ -18,8 +18,17 @@ def update_value(value):
     sbc.set_brightness(value)
     value_label.config(text=f"Nytt värde: {value}")
 
-    brightness = sbc.set_brightness(value)
 
+def set_lowest_brightness():
+    sbc.set_brightness(0)
+    value_scale.set(0)  # Update slider position
+    value_label.config(text="Nytt värde: 0")
+
+
+def set_highest_brightness():
+    sbc.set_brightness(100)
+    value_scale.set(100)  # Update slider position
+    value_label.config(text="Nytt värde: 100")
 
 
 # Skapa huvudfönstret
@@ -36,11 +45,16 @@ print(value_scale.get())
 value_label = tk.Label(root, text="Nytt värde: 1")
 value_label.pack(pady=5)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-    brightness = sbc.set_brightness(100)
+lowest_button = Button(root, text="Lägsta ljusstyrka", command=set_lowest_brightness)
+lowest_button.pack()
+
+highest_button = Button(root, text="Högsta ljusstyrka", command=set_highest_brightness)
+highest_button.pack()
+
+
+if __name__ == '__main__':
+
     root.mainloop()
 
 
