@@ -1,4 +1,5 @@
 # Screen-Brightness
+![](img/ljusstyrka_klar.png)
 
 ## Prerequisites
 
@@ -8,4 +9,4 @@
 
 ### grab the main.exe file located in dist folder
 
-![](img/ljusstyrka_klar.png)
+
