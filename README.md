@@ -3,9 +3,9 @@
 
 ## Prerequisites
 
-### A computer running no other OS than Windows 10
+### A computer running Windows 10
 
-## Download
+## Download steps
 
 ### grab the main.exe file located in dist folder
 
